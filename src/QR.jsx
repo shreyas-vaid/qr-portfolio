@@ -1,30 +1,44 @@
-const qrCode = new QRCodeStyling({
-  width: 220,
-  height: 220,
-  data: "https://shreyas-portfolio-nu.vercel.app/",
-  image: logo,
+import { useEffect, useRef } from "react";
+import QRCodeStyling from "qr-code-styling";
+import logo from "./assets/logo.png";
 
-  dotsOptions: {
-    color: "#000000", // black QR
-    type: "rounded",
-  },
+export default function QR() {
+  const ref = useRef(null);
 
-  backgroundOptions: {
-    color: "#ffe5e5", // 🔥 LIGHT RED (safe for scanning)
-  },
+  useEffect(() => {
+    const qrCode = new QRCodeStyling({
+      width: 220,
+      height: 220,
+      data: "https://shreyas-portfolio-nu.vercel.app/",
+      image: logo,
 
-  imageOptions: {
-    margin: 5,
-    imageSize: 0.25,
-  },
+      dotsOptions: {
+        color: "#000000",
+        type: "rounded",
+      },
 
-  cornersSquareOptions: {
-    type: "extra-rounded",
-    color: "#000000",
-  },
+      backgroundOptions: {
+        color: "#ffe5e5",
+      },
 
-  cornersDotOptions: {
-    type: "dot",
-    color: "#030000",
-  },
-});
+      imageOptions: {
+        margin: 5,
+        imageSize: 0.25,
+      },
+
+      cornersSquareOptions: {
+        type: "extra-rounded",
+        color: "#000000",
+      },
+
+      cornersDotOptions: {
+        type: "dot",
+        color: "#000000",
+      },
+    });
+
+    qrCode.append(ref.current);
+  }, []);
+
+  return <div ref={ref}></div>;
+}
