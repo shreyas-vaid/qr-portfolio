@@ -5,22 +5,22 @@ const qrCode = new QRCodeStyling({
   image: logo, // ✅ ADD THIS
 
   dotsOptions: {
-    color: "#00ffff",
-    type: "classy-rounded",
-  },
+  color: "#000000", // 🔥 BLACK (very important)
+  type: "rounded",
+    },
 
   backgroundOptions: {
-    color: "transparent",
-  },
+  color: "#ffffff", // 🔥 WHITE background
+    },
 
   imageOptions: {
     margin: 5,
-    imageSize: 0.3, // 🔥 reduce for better scanning
+    imageSize: 0.25, // 🔥 reduce for better scanning
   },
 
   cornersSquareOptions: {
     type: "extra-rounded",
-    color: "#764ba2",
+    color: "#000000",
   },
 
   cornersDotOptions: {
