@@ -25,6 +25,6 @@ const qrCode = new QRCodeStyling({
 
   cornersDotOptions: {
     type: "dot",
-    color: "#000000",
+    color: "#030000",
   },
 });
