@@ -2,20 +2,20 @@ const qrCode = new QRCodeStyling({
   width: 220,
   height: 220,
   data: "https://shreyas-portfolio-nu.vercel.app/",
-  image: logo, // ✅ ADD THIS
+  image: logo,
 
   dotsOptions: {
-  color: "#000000", // 🔥 BLACK (very important)
-  type: "rounded",
-    },
+    color: "#000000", // black QR
+    type: "rounded",
+  },
 
   backgroundOptions: {
-  color: "#ffffff", // 🔥 WHITE background
-    },
+    color: "#ffe5e5", // 🔥 LIGHT RED (safe for scanning)
+  },
 
   imageOptions: {
     margin: 5,
-    imageSize: 0.25, // 🔥 reduce for better scanning
+    imageSize: 0.25,
   },
 
   cornersSquareOptions: {
@@ -25,6 +25,6 @@ const qrCode = new QRCodeStyling({
 
   cornersDotOptions: {
     type: "dot",
-    color: "#00ffff",
+    color: "#000000",
   },
 });
