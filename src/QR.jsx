@@ -1,52 +1,30 @@
-import { useEffect, useRef } from "react";
-import QRCodeStyling from "qr-code-styling";
-import logo from "./assets/logo.png";
+const qrCode = new QRCodeStyling({
+  width: 220,
+  height: 220,
+  data: "https://shreyas-portfolio-nu.vercel.app/",
+  image: logo, // ✅ ADD THIS
 
-export default function QR() {
-  const ref = useRef(null);
+  dotsOptions: {
+    color: "#00ffff",
+    type: "classy-rounded",
+  },
 
-  const qrCode = new QRCodeStyling({
-    width: 220,
-    height: 220,
-    data: "https://shreyas-portfolio-nu.vercel.app/",
+  backgroundOptions: {
+    color: "transparent",
+  },
 
-    dotsOptions: {
-      color: "#00ffff",
-      type: "classy-rounded",
-    },
+  imageOptions: {
+    margin: 5,
+    imageSize: 0.3, // 🔥 reduce for better scanning
+  },
 
-    backgroundOptions: {
-      color: "transparent",
-    },
+  cornersSquareOptions: {
+    type: "extra-rounded",
+    color: "#764ba2",
+  },
 
-    imageOptions: {
-      margin: 5,
-      imageSize: 0.4,
-    },
-
-    cornersSquareOptions: {
-      type: "extra-rounded",
-      color: "#764ba2",
-    },
-
-    cornersDotOptions: {
-      type: "dot",
-      color: "#00ffff",
-    },
-  });
-
-  useEffect(() => {
-    qrCode.append(ref.current);
-  }, []);
-
-  return (
-    <div style={{ marginTop: "15px" }}>
-      <div ref={ref}></div>
-
-      {/* Download Button */}
-      <button onClick={() => qrCode.download({ name: "qr", extension: "png" })}>
-        Download QR
-      </button>
-    </div>
-  );
-}
+  cornersDotOptions: {
+    type: "dot",
+    color: "#00ffff",
+  },
+});
