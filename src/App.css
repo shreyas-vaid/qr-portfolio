@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Container */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  transition: 0.4s;
+}
+
+/* Dark Mode */
+.container.dark {
+  background: #0f172a;
+}
+
+/* Glass Card */
+.card {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 25px;
+  width: 300px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Profile */
+.profile {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+/* Typing */
+.typing {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+/* Bio */
+.bio {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Links */
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.links a {
+  font-size: 20px;
+  color: white;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  transform: scale(1.2);
+}
+
+/* Section */
+.section {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.section h3 {
+  margin-bottom: 5px;
+}
+
+/* Theme Button */
+.theme-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
