@@ -8,8 +8,7 @@ export default function QR() {
   const qrCode = new QRCodeStyling({
     width: 220,
     height: 220,
-    data: "https://example.com", // 🔥 replace after deploy
-    image: logo,
+    data: "https://shreyas-portfolio-nu.vercel.app/",
 
     dotsOptions: {
       color: "#00ffff",
