@@ -23,9 +23,9 @@ export default function App() {
   }, [])
 
   const links = [
-    { icon: <FaInstagram />, url: "https://instagram.com/your_username" },
-    { icon: <FaGithub />, url: "https://github.com/your_username" },
-    { icon: <FaLinkedin />, url: "https://linkedin.com/in/your_username" }
+    { icon: <FaInstagram />, url: "https://www.instagram.com/rewritten_shreyas?igsh=cHd1anR2cmltMDd2" },
+    { icon: <FaGithub />, url: "https://github.com/shreyas-vaid" },
+    { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/shreyas-vaid-447b20320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" }
   ]
 
   return (
